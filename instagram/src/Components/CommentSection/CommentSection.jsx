@@ -48,6 +48,7 @@ class CommentSection extends React.Component {
 
         <FormStyled onSubmit={this.addNewComment}>
           <textarea
+            rows='1'
             type="text"
             placeholder="comment"
             value={this.state.userComment}
@@ -85,6 +86,7 @@ const CommentsStyled = styled.div`
   }
 
   .username {
+    font-size: .8rem;
     margin: 10px;
   }
 `;
@@ -98,6 +100,9 @@ const FormStyled = styled.form`
     width: 60%;
     max-width: 80%;
     margin-bottom: 3px;
+    border-style: none;
+    border-bottom: 1px solid black;
+    text-align: justify;
   }
 
   button {
@@ -105,6 +110,12 @@ const FormStyled = styled.form`
     border-radius: 6px;
     margin: 5px;
     padding: 1px;
+    border: none;
+
+    &:hover {
+      background-color: darkgrey;
+      color: white;
+    }
   }
 `;
 
